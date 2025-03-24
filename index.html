@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+Copyright 2025 Joseph Wangai Mwaniki
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/js/script.js"></script>
+</head>
+<body>
+    <div class="h1"><h1>Calculator</h1></div>
+    <div class="con">
+        <div class="calculator" id="Safe">
+            <div class="screen">
+                <div class="span"></div>
+                <input type="text" id="out" value="Output is displayed here."readonly disabled >
+                <input type="text" id="in" readonly disabled>
+                <div class="buttons">
+                    <div class="row">
+                        <button onclick="calculator('1');" id="button">1</button>
+                        <button onclick="calculator('2');" id="button">2</button>
+                        <button onclick="calculator('3');" id="button">3</button>
+                        <button onclick="calculator('+');" id="button">+</button>    
+                    </div>
+                    <div class="row">
+                        <button onclick="calculator('4');" id="button">4</button>
+                        <button onclick="calculator('5');" id="button">5</button>
+                        <button onclick="calculator('6');" id="button">6</button>
+                        <button onclick="calculator('-');" id="button">-</button>
+    
+                    </div>
+                    <div class="row">
+                        <button onclick="calculator('7');" id="button">7</button>
+                        <button onclick="calculator('8');" id="button">8</button>
+                        <button onclick="calculator('9');" id="button">9</button>
+                        <button onclick="calculator('*');" id="button">&times;</button>    
+                    </div>
+                    <div class="row">
+                        <button onclick="calculator('0');" id="button">0</button>
+                        <button onclick="calculator('/');" id="button">&div;</button>
+                        <button onclick="calculator('.');" id="button">.</button> 
+                        <button onclick="execute();" id="button">=</button>    
+                    </div>
+                </div>
+                <div class="span"
+                     style=" 
+                     flex-direction: row-reverse;">
+                    <button id="button" onclick="backspace();">&#x232B;</button>
+                    <button id="button" onclick="Save();">&#x1F4BE;</button>
+                    <!--<div id="Choose" popover>
+                        <button id="button" onclick="saveAsHTML();">&#x1F4BE;<br>Save</button>
+                        <button id="button" onclick="print();">&#x1F4BE;<br>Print</button>
+                        <button id="button" popovertarget="Choose">close</button>
+                    </div>-->
+                    <button id="button" onclick="window.location.reload();">&#x27F3;</button>
+                </div>
+            </div>
+        </div>
+        <div class="calculator">
+            <div id="history"></div>
+        </div>
+    </div>
+
+</body>
+</html>
