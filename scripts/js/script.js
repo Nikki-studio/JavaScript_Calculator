@@ -28,7 +28,14 @@ let Answer="";
 let History="";
 function execute(){
     try{
-    Answer = eval(String);
+    function calculate(string) {
+  if (/^[0-9+\-*/().\s]+$/.test(string)) {
+    return eval(string);
+  } else {
+    x =Error("Invalid characters in your input");
+   throw new x;return x;
+  }
+} Answer = calculate(String);
     }catch(error){
         Answer="Error."
     }
